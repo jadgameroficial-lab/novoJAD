@@ -33,7 +33,7 @@ export function Footer() {
       </div>
       <div
         aria-hidden="true"
-        className={`${jadWordmarkFont.className} pointer-events-none -mb-4 mt-10 select-none text-center leading-none text-foreground/5`}
+        className={`${jadWordmarkFont.className} pointer-events-none -mb-4 mt-10 select-none whitespace-nowrap text-center leading-none text-white`}
         style={{ fontSize: "var(--text-watermark)" }}
       >
         {wordmarkFull}
