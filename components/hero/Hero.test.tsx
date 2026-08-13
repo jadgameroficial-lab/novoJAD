@@ -1,8 +1,8 @@
 import { describe, expect, it, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 
-vi.mock("./AntigravityField", () => ({
-  AntigravityField: () => <div data-testid="antigravity-field-stub" />,
+vi.mock("./HeroScene", () => ({
+  HeroScene: () => <div data-testid="hero-scene-stub" />,
 }));
 
 import { Hero } from "./Hero";
