@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import { content } from "@/lib/content";
-import { jadWordmarkFont } from "@/lib/fonts";
 import { StaggeredMenu } from "./StaggeredMenu";
+import { ParticleLogo } from "./ParticleLogo";
 import { SpringLink, SpringButton } from "@/components/motion/SpringPress";
 
 export function Nav() {
@@ -13,8 +13,8 @@ export function Nav() {
     <>
       <header className="fixed inset-x-0 top-0 z-50 border-b border-transparent py-5 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 md:px-10">
-          <a href="#home" className={`${jadWordmarkFont.className} text-xl text-foreground`}>
-            JAD
+          <a href="#home" className="text-foreground" aria-label="JAD">
+            <ParticleLogo text="JAD" width={76} height={30} />
           </a>
           <nav className="hidden items-center gap-8 lg:flex">
             {content.nav.items.map((item) => (
