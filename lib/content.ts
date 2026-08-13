@@ -32,7 +32,14 @@ export interface SiteContent {
     items: { title: string; description: string }[];
   };
   finalCta: { headline: string; subheadline: string; cta: { label: string; href: string } };
-  footer: { wordmark: string; wordmarkFull: string; tagline: string; stack: string; links: { label: string; href: string }[] };
+  footer: {
+    wordmark: string;
+    wordmarkFull: string;
+    tagline: string;
+    stack: string;
+    links: { label: string; href: string }[];
+    founder: { name: string; title: string; photo: string };
+  };
 }
 
 export const content: SiteContent = {
@@ -196,5 +203,11 @@ export const content: SiteContent = {
       { label: "Processo", href: "#processo" },
       { label: "Cases", href: "#cases" },
     ],
+    founder: {
+      // TODO: nome completo do founder ainda não informado — ver AVISO no final da resposta.
+      name: "",
+      title: "Founder",
+      photo: "/founder.jpg",
+    },
   },
 };
