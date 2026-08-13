@@ -10,21 +10,38 @@ import { Differentiators } from "@/components/sections/Differentiators";
 import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { Footer } from "@/components/sections/Footer";
+import { IntroCurtain } from "@/components/motion/IntroCurtain";
+import { SectionTransition } from "@/components/motion/SectionTransition";
 
 export default function Page() {
   return (
     <>
+      <IntroCurtain />
       <main>
         <Hero />
-        <AuthorityStrip />
+        <SectionTransition>
+          <AuthorityStrip />
+        </SectionTransition>
         <ClientsMarquee />
-        <Solutions />
+        <SectionTransition>
+          <Solutions />
+        </SectionTransition>
         <TaglineReveal />
-        <Process />
-        <TechSection />
-        <Cases />
-        <Differentiators />
-        <Faq />
+        <SectionTransition>
+          <Process />
+        </SectionTransition>
+        <SectionTransition>
+          <TechSection />
+        </SectionTransition>
+        <SectionTransition>
+          <Cases />
+        </SectionTransition>
+        <SectionTransition>
+          <Differentiators />
+        </SectionTransition>
+        <SectionTransition>
+          <Faq />
+        </SectionTransition>
         <FinalCta />
       </main>
       <Footer />
