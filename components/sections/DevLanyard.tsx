@@ -165,7 +165,7 @@ function Card({ isMobile, flipGroupRef }: { isMobile: boolean; flipGroupRef: Ref
   const faceH = CARD_HEIGHT - FACE_MARGIN * 2;
 
   return (
-    <group ref={flipGroupRef} position={[0, -1.2, -0.05]}>
+    <group ref={flipGroupRef}>
       <RoundedBox args={[CARD_WIDTH, CARD_HEIGHT, CARD_DEPTH]} radius={CARD_RADIUS} smoothness={4}>
         <meshPhysicalMaterial
           color="#f2f2ef"
@@ -221,7 +221,7 @@ function Band({
   useRopeJoint(j2 as RigidBodyRef, j3 as RigidBodyRef, [[0, 0, 0], [0, 0, 0], 1]);
   useSphericalJoint(j3 as RigidBodyRef, card as RigidBodyRef, [
     [0, 0, 0],
-    [0, 1.4, 0],
+    [0, CARD_HEIGHT / 2 - 0.1, 0],
   ]);
 
   useEffect(() => {
@@ -294,7 +294,6 @@ function Band({
           <BallCollider args={[0.9]} />
           <mesh
             visible={false}
-            position={[0, -1.2, -0.05]}
             onPointerOver={handlePointerOver}
             onPointerOut={handlePointerOut}
             onPointerDown={handlePointerDown}
